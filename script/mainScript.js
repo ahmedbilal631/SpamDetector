@@ -34,7 +34,7 @@ GetUserList = () => {
     var paragraph = document.createElement("p");
     paragraph.setAttribute("class", "text-justify");
     var myInst = document.createTextNode(
-      "You defined no criteria, Please redefine it or start directly from criteria stored in database."
+      "You have defined no criteria, Please redefine it or start directly from criteria stored in database."
     );
     paragraph.appendChild(myInst);
     grapDisplay.appendChild(paragraph);
@@ -141,6 +141,8 @@ Result = () => {
   document.getElementById("words").innerHTML = totalKeys;
   if (totalKeys > 0) {
     document.getElementById("contentCTG").innerHTML = "Spam";
+  } else {
+    document.getElementById("contentCTG").innerHTML = "Clear";
   }
   document.getElementById("keysHere").innerHTML = detectedKeywords;
   document.getElementById("paraHere").innerHTML = inputedString;
